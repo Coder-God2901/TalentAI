@@ -1,0 +1,275 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  
+  /* TalentAI Brand Colors */
+  --talentai-primary: #0A2540;
+  --talentai-secondary: #6C63FF;
+  --talentai-accent: #00E5A0;
+  --talentai-neutral-light: #F5F7FA;
+  --talentai-neutral-dark: #1C1E21;
+  --talentai-text-light: #FFFFFF;
+  --talentai-text-dark: #111111;
+  
+  /* Light Theme (Recruiters) */
+  --background: #F5F7FA;
+  --foreground: #111111;
+  --card: #FFFFFF;
+  --card-foreground: #111111;
+  --popover: #FFFFFF;
+  --popover-foreground: #111111;
+  --primary: #0A2540;
+  --primary-foreground: #FFFFFF;
+  --secondary: #6C63FF;
+  --secondary-foreground: #FFFFFF;
+  --muted: #E5E7EB;
+  --muted-foreground: #6B7280;
+  --accent: #00E5A0;
+  --accent-foreground: #111111;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(10, 37, 64, 0.1);
+  --input: #FFFFFF;
+  --input-background: #FFFFFF;
+  --switch-background: #D1D5DB;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #0A2540;
+  --chart-1: #0A2540;
+  --chart-2: #6C63FF;
+  --chart-3: #00E5A0;
+  --chart-4: #F59E0B;
+  --chart-5: #EF4444;
+  --radius: 0.75rem;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #111111;
+  --sidebar-primary: #0A2540;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F5F7FA;
+  --sidebar-accent-foreground: #111111;
+  --sidebar-border: rgba(10, 37, 64, 0.1);
+  --sidebar-ring: #0A2540;
+  
+  /* Gradient definitions */
+  --gradient-primary: linear-gradient(135deg, #0A2540, #6C63FF);
+  --gradient-secondary: linear-gradient(135deg, #6C63FF, #00E5A0);
+  --gradient-accent: linear-gradient(135deg, #00E5A0, #0A2540);
+}
+
+.dark {
+  /* Dark Theme (Candidates/Engineers) */
+  --background: #1C1E21;
+  --foreground: #FFFFFF;
+  --card: #2A2D32;
+  --card-foreground: #FFFFFF;
+  --popover: #2A2D32;
+  --popover-foreground: #FFFFFF;
+  --primary: #6C63FF;
+  --primary-foreground: #FFFFFF;
+  --secondary: #0A2540;
+  --secondary-foreground: #FFFFFF;
+  --muted: #374151;
+  --muted-foreground: #9CA3AF;
+  --accent: #00E5A0;
+  --accent-foreground: #1C1E21;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: #2A2D32;
+  --input-background: #2A2D32;
+  --switch-background: #374151;
+  --ring: #6C63FF;
+  --chart-1: #6C63FF;
+  --chart-2: #00E5A0;
+  --chart-3: #0A2540;
+  --chart-4: #F59E0B;
+  --chart-5: #EF4444;
+  --sidebar: #2A2D32;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #6C63FF;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #374151;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: #6C63FF;
+}
+
+/* TalentAI specific utility classes */
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-gradient-secondary {
+  background: var(--gradient-secondary);
+}
+
+.bg-gradient-accent {
+  background: var(--gradient-accent);
+}
+
+.text-gradient-primary {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-secondary {
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hover-accent {
+  transition: all 0.2s ease-in-out;
+}
+
+.hover-accent:hover {
+  color: var(--talentai-accent);
+  border-color: var(--talentai-accent);
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: var(--talentai-text-light);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 8px 25px rgba(108, 99, 255, 0.3);
+}
+
+.btn-accent {
+  background-color: var(--talentai-accent);
+  color: var(--talentai-neutral-dark);
+  transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+  background-color: var(--talentai-accent);
+  filter: brightness(0.9);
+  box-shadow: 0 8px 25px rgba(0, 229, 160, 0.3);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* TalentAI Brand Colors */
+  --color-talentai-primary: var(--talentai-primary);
+  --color-talentai-secondary: var(--talentai-secondary);
+  --color-talentai-accent: var(--talentai-accent);
+  --color-talentai-neutral-light: var(--talentai-neutral-light);
+  --color-talentai-neutral-dark: var(--talentai-neutral-dark);
+  --color-talentai-text-light: var(--talentai-text-light);
+  --color-talentai-text-dark: var(--talentai-text-dark);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
